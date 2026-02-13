@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg-app: #050505;
+  --bg-panel: rgba(20, 20, 25, 0.6);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --primary: #6366f1; /* Indigo */
+  --accent: #10b981;  /* Emerald */
+  --text-main: #ffffff;
+  --text-muted: #9ca3af;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  overflow: hidden;
+  /* Premium Arka Plan Işığı */
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.05) 0%, transparent 25%);
+}
+
+/* Scrollbar Gizleme (Sadece işlev kalsın) */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
+
+/* Drag Region */
+.title-drag-region {
+  -webkit-app-region: drag;
+  position: fixed; top: 0; left: 0; right: 0; height: 32px; z-index: 9999;
+}
+.no-drag { -webkit-app-region: no-drag; }
+
+/* Glass Panel Efekti */
+.glass {
+  background: var(--bg-panel);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* input ve button reset */
+input, button { outline: none; font-family: 'Inter', sans-serif; }
